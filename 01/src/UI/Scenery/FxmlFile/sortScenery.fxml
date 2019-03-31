@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Scenery.Controller.SortSceneryController">
+    <MenuBar fx:id="sceneryMenu" prefHeight="30.0" prefWidth="1080.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="功能">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#read" text="景区景点分布图" />
+                    <MenuItem mnemonicParsing="false" onAction="#change" text="景区景点修改" />
+                    <MenuItem mnemonicParsing="false" onAction="#search" text="景区景点查找" />
+                    <MenuItem mnemonicParsing="false" text="景区景点排序" />
+                    <MenuItem mnemonicParsing="false" onAction="#shortestPath" text="两个景点间最短路径和最短距离" />
+                    <MenuItem mnemonicParsing="false" onAction="#tourGuide" text="输出导游路线图" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="查看系统使用说明" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="退出">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#exit" text="退出" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+    <Canvas fx:id="canvas" height="518.0" layoutX="557.0" layoutY="57.0" width="509.0" />
+    <TextArea fx:id="attractionText" layoutX="262.0" layoutY="57.0" prefHeight="518.0" prefWidth="289.0">
+        <font>
+            <Font size="28.0" />
+        </font>
+    </TextArea>
+   <GridPane layoutX="10.0" layoutY="57.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <RadioButton fx:id="c1" mnemonicParsing="false" text="冒泡排序" userData="1" />
+         <RadioButton fx:id="c2" mnemonicParsing="false" text="选择排序" userData="2" GridPane.rowIndex="1" />
+         <RadioButton fx:id="c3" mnemonicParsing="false" text="插入排序" userData="3" GridPane.rowIndex="2" />
+          <RadioButton fx:id="c4" mnemonicParsing="false" text="希尔排序" userData="4" GridPane.rowIndex="3" />
+         <RadioButton fx:id="c5" mnemonicParsing="false" text="归并排序" userData="5" GridPane.rowIndex="4" />
+          <RadioButton fx:id="c6" mnemonicParsing="false" text="快速排序" userData="6" GridPane.rowIndex="5" />
+         <Button mnemonicParsing="false" onAction="#sort" text="开始排序" GridPane.rowIndex="7" />
+         <ChoiceBox fx:id="box1" prefWidth="150.0" GridPane.rowIndex="6" />
+         <Label fx:id="warning" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         <Button mnemonicParsing="false" onAction="#disorder" text="打乱顺序" GridPane.rowIndex="8" />
+      </children>
+   </GridPane>
+    <stylesheets>
+        <URL value="@../Style/Style3.css" />
+    </stylesheets>
+</AnchorPane>

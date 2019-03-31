@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Scenery.Controller.ReadSceneryController">
+    <MenuBar fx:id="sceneryMenu" prefHeight="30.0" prefWidth="1080.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="功能">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="景区景点分布图"/>
+                    <MenuItem mnemonicParsing="false" onAction="#change" text="景区景点修改"/>
+                    <MenuItem mnemonicParsing="false" onAction="#search" text="景区景点查找"/>
+                    <MenuItem mnemonicParsing="false" onAction="#sort" text="景区景点排序"/>
+                    <MenuItem mnemonicParsing="false" onAction="#shortestPath" text="两个景点间最短路径和最短距离"/>
+                    <MenuItem mnemonicParsing="false" onAction="#tourGuide" text="输出导游路线图"/>
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="查看系统使用说明" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="退出">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#exit" text="退出" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+   <Button layoutX="24.0" layoutY="57.0" mnemonicParsing="false" onAction="#openSceneryFile" text="选择景点文件" />
+   <Button layoutX="24.0" layoutY="114.0" mnemonicParsing="false" onAction="#openSceneryInf" text="选择景点信息" />
+   <Button layoutX="24.0" layoutY="171.0" mnemonicParsing="false" onAction="#createGraph" text="生成景点分布图" />
+   <TextArea fx:id="attractionText" layoutX="150.0" layoutY="57.0" prefHeight="518.0" prefWidth="401.0">
+      <font>
+         <Font size="28.0" />
+      </font></TextArea>
+   <Label fx:id="warning" layoutX="24.0" layoutY="228.0" />
+   <Canvas fx:id="canvas" height="518.0" layoutX="557.0" layoutY="57.0" width="509.0" />
+    <stylesheets>
+        <URL value="@../Style/Style3.css" />
+    </stylesheets>
+</AnchorPane>

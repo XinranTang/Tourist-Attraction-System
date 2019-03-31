@@ -1,0 +1,10 @@
+#sceneryMenu{
+     -fx-font-family: STZhongsong;
+     -fx-font-size: 15px;
+ }
+
+.root {
+    -fx-background-image: url("../../Image/2.jpg");
+    -fx-background-repeat: repeat-x;
+    -fx-background-size: 110%;
+}

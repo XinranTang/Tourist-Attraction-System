@@ -1,0 +1,42 @@
+.root{
+    -fx-background-image: url("../../Image/4.jpg");
+    -fx-background-repeat: repeat-x;
+    -fx-background-size: 100%;
+}
+#warning0{
+    -fx-font-family: STZhongsong;
+    -fx-text-fill: red;
+}
+#warning1{
+    -fx-font-family: STZhongsong;
+    -fx-text-fill: red;
+}
+#warning2{
+    -fx-font-family: STZhongsong;
+    -fx-text-fill: red;
+}
+#sceneryMenu{
+    -fx-font-family: STZhongsong;
+    -fx-font-size: 15px;
+}
+.label{
+    -fx-font-family: STZhongsong;
+}
+#prompt{
+    -fx-font-family: STZhongsong;
+    -fx-font-size: 15px;
+    -fx-text-fill: darkred;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: STZhongsong;
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#b2bcb7, #2A5058);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#2A5058, #dadbd6);
+    -fx-font-family: STZhongsong;
+}
