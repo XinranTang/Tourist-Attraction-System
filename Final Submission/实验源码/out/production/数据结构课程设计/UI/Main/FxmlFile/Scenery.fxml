@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.121"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Main.Controller.SceneryController">
+    <children>
+        <MenuBar fx:id="sceneryMenu" prefHeight="30.0" prefWidth="1080.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="功能">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#readScenery" text="景区景点分布图"/>
+                        <MenuItem mnemonicParsing="false" text="景区景点修改"/>
+                        <MenuItem mnemonicParsing="false" text="景区景点查找"/>
+                        <MenuItem mnemonicParsing="false" text="景区景点排序"/>
+                        <MenuItem mnemonicParsing="false" text="两个景点间最短路径和最短距离"/>
+                        <MenuItem mnemonicParsing="false" text="输出导游路线图"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="查看系统使用说明"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="退出">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#exit" text="退出"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <GridPane layoutY="86.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+        </GridPane>
+    </children>
+    <stylesheets>
+        <URL value="@../Style/Style2.css"/>
+    </stylesheets>
+</AnchorPane>

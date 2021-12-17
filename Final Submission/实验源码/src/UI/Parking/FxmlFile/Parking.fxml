@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Parking.Controller.ParkingController">
+    <Canvas fx:id="canvas0" height="518.0" layoutX="268.0" layoutY="57.0" width="801.0" />
+    <Canvas fx:id="canvas1" height="518.0" layoutX="268.0" layoutY="57.0" width="801.0" />
+    <MenuBar fx:id="sceneryMenu" prefHeight="30.0" prefWidth="1080.0">
+        <menus>
+            <Menu mnemonicParsing="false" text="景点">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#read" text="景区景点分布图" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+                <items>
+                    <MenuItem mnemonicParsing="false" text="查看系统使用说明" />
+                </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="退出">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#exit" text="退出" />
+                </items>
+            </Menu>
+        </menus>
+    </MenuBar>
+   <GridPane layoutX="6.0" layoutY="57.0" prefHeight="292.0" prefWidth="263.0">
+     <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+     </columnConstraints>
+     <rowConstraints>
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+     </rowConstraints>
+      <children>
+         <TextField fx:id="t1" GridPane.columnIndex="1" />
+         <Label fx:id="l1" text="输入停车场容量：" />
+         <Button fx:id="b1" mnemonicParsing="false" onAction="#createCenter" text="创建停车场" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Label text="输入车号：" GridPane.rowIndex="3" />
+         <TextField fx:id="t2" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         <Button mnemonicParsing="false" onAction="#park" text="车辆进车场" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <Button mnemonicParsing="false" onAction="#leave" text="车辆出车场" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+         <Label text="输入车号：" GridPane.rowIndex="5" />
+         <TextField fx:id="t3" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         <Label fx:id="warning1" GridPane.rowIndex="4" />
+         <Label fx:id="warning2" GridPane.rowIndex="6" />
+         <Label fx:id="warning0" GridPane.rowIndex="1" />
+      </children>
+   </GridPane>
+   <Label fx:id="prompt" layoutX="14.0" layoutY="349.0" prefHeight="188.0" prefWidth="254.0" />
+   <AnchorPane fx:id="pane" layoutX="297.0" layoutY="57.0" prefHeight="506.0" prefWidth="774.0" />
+    <stylesheets>
+        <URL value="@../Style/Style4.css" />
+    </stylesheets>
+</AnchorPane>
